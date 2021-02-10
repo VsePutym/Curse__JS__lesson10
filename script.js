@@ -6,8 +6,7 @@ let book1 = document.querySelectorAll('.book')[1],
     book5 = document.querySelectorAll('.book')[5],
     book6 = document.querySelectorAll('.book')[2],
     targetBook3 = book3.querySelector('a'),
-    body = document.querySelector('body'),
-    banner = body.querySelector('.adv'),
+    banner = document.body.querySelector('.adv'),
     chapterBook2 = book2.querySelectorAll('li'),
     chapterBook5 = book5.querySelectorAll('li'),
     ulBook6 = book6.querySelector('ul');
@@ -16,7 +15,7 @@ book2.before(book1);
 book2.after(book3);
 book3.after(book4);
 book5.after(book6);
-body.style.backgroundImage = 'url(image/you-dont-know-js.jpg)';
+document.body.style.backgroundImage = 'url(image/you-dont-know-js.jpg)';
 targetBook3.textContent = 'Книга 3. this и Прототипы Объектов';
 banner.remove();
 
@@ -28,7 +27,7 @@ chapterBook5[1].after(chapterBook5[9]);
 chapterBook5[4].after(chapterBook5[2]);
 chapterBook5[7].after(chapterBook5[5]);
 
-ulBook6.insertAdjacentHTML('beforeend', '<li>Глава8</li>');
+ulBook6.insertAdjacentHTML('beforeend', '<li>Глава8: За пределами ES6</li>');
 let chapterBook6 = book6.querySelectorAll('li');
 chapterBook6[9].before(chapterBook6[10]);
 
